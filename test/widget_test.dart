@@ -11,20 +11,58 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:tugas_pertama/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  // Tipe data dan variabel
+  // Variabel
+  var mahasiswa = "Farrel";
+  var umur = 19;
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+  print("Nama: " + mahasiswa + ", Umur: " + umur.toString());
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+  // String
+  String mahasiswaString;
+  mahasiswaString = "Farrel Fachrezaqy";
+  String umurString;
+  umurString = "19";
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
-  });
+  print("Nama: " + mahasiswaString + ", Umur: " + umurString);
+
+  // Integer
+  int semester;
+  semester = 4;
+
+  print("Semester: " + semester.toString());
+
+  // Double
+  double ipk;
+  ipk = 3.8;
+
+  print("IPK: " + ipk.toString());
+
+  // Boolean
+  bool benar = true;
+  bool salah = false;
+  bool tidakbenar = !true;
+  bool tidaksalah = !false;
+
+  // List
+  List jurusan = [
+    "Teknik Informatika",
+    "Sistem Informasi",
+    semester.toString(),
+    ipk.toString()
+  ];
+
+  print(jurusan);
+
+  // Mapping
+  Map<String, dynamic> kelas = {
+    "Nama": "Farrel Fachrezaqy",
+    "Kelas": "TI 1/4",
+    "Peminatan": "Intelligent System"
+  };
+
+  print(kelas);
+  print(kelas["Nama"]);
+  print(kelas["Kelas"]);
+  print(kelas["Peminatan"]);
 }
