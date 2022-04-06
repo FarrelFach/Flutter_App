@@ -65,4 +65,20 @@ void main() {
   print(kelas["Nama"]);
   print(kelas["Kelas"]);
   print(kelas["Peminatan"]);
+
+  // Operator
+  int d, f;
+  d = 50;
+  f = 5;
+  print("D = " + d.toString());
+  print("F = " + f.toString());
+
+  print(d + f);
+  print(d - f);
+  print(d / f);
+  print(d * f);
+  print(d > f);
+  print(d < f);
+  print(d >= f);
+  print(d <= f);
 }
