@@ -44,3 +44,37 @@ Future<String> func4(int nilai) {
     }
   });
 }
+
+void main2() async {
+  wanita1();
+  laki1();
+  await badai();
+  wanita2();
+}
+
+Future wanita1() {
+  String status = "pacaran dengan laki1";
+  print(status);
+  return Future.delayed(Duration(seconds: 2), () {
+    print("Wanita1: Saya putus dengan Kamu");
+  });
+}
+
+laki1() {
+  String status = "pacaran dengan Wanita1";
+  return Future.delayed(Duration(seconds: 1), () {
+    print(status);
+  });
+}
+
+wanita2() {
+  return Future.delayed(Duration(seconds: 1), () {
+    print("Wanita lain langsung masuk ke kehidupan Laki1");
+  });
+}
+
+Future badai() {
+  return Future.delayed(Duration(seconds: 3), () {
+    print("Terjadi badai yang membuat mereka putus");
+  });
+}
